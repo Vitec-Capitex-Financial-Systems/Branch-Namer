@@ -13,4 +13,4 @@ When the extension is installed and activated in Chrome, simply select a text, t
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](LICENSE)
