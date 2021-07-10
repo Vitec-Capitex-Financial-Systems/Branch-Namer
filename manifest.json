@@ -1,0 +1,31 @@
+{
+    "manifest_version": 2,
+
+    "name": "Branch Namer",
+    "description": "Copies selected text and converts it to a valid Git branch name for feature or bugfix branches.",
+    "version": "1.1",
+    "author": "P-C",
+
+    "browser_action": {
+        "default_icon": "branchnamer-icon128.png",
+        "default_popup": "popup.html"
+    },
+
+    "permissions": [
+        "activeTab",
+        "contextMenus"
+    ],
+  
+    "background": {
+        "persistent": false,
+        "scripts": [
+            "contextmenu.js"
+        ]
+    },
+  
+    "icons": {
+        "16": "branchnamer-icon16.png",
+        "64": "branchnamer-icon64.png",
+        "128": "branchnamer-icon128.png"
+    }
+}
