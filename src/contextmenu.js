@@ -13,19 +13,22 @@ chrome.runtime.onInstalled.addListener(function() {
 
 chrome.contextMenus.onClicked.addListener(function(info, tab) {
     if (tab) {
+        var branchPrefix = '';
         var branchName = info.selectionText;
         if (info.menuItemId === 'copyForFeatureBranch') {
-            branchName = "feature/" + branchName;
+            branchPrefix = "feature/";
         } else {
-            branchName = "bugfix/" + branchName;
+            branchPrefix = "bugfix/";
         }
-        copyToClipboard(branchName);
+        copyToClipboard(branchPrefix, branchName);
     }
 });
   
-const copyToClipboard = branchName => {
+const copyToClipboard = (branchPrefix, branchName) => {
     const textElement = document.createElement('textarea');
-    textElement.value = branchName.replace(/[\.\s+ ,:#]/g, '-').toLowerCase().replace(/[åä]/g, 'a').replace(/[ö]/g, 'o');
+    textElement.value = branchPrefix + branchName.toLowerCase()
+        .replace(/[åä]/g, 'a').replace(/[ö]/g, 'o').replace(/[^a-z0-9]/g, '-')
+        .replace(/\-+/g, '-').replace(/^\-|\-$/g, '');
     textElement.setAttribute('readonly', '');
     textElement.style.position = 'absolute';
     textElement.style.left = '-9999px';
