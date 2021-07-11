@@ -23,7 +23,7 @@
   
     "icons": {
         "16": "images/branchnamer-icon16.png",
-        "64": "images/branchnamer-icon48.png",
+        "48": "images/branchnamer-icon48.png",
         "128": "images/branchnamer-icon128.png"
     }
 }
