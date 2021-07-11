@@ -4,7 +4,7 @@
     "name": "Branch Namer",
     "description": "Copies selected text and converts it to a valid Git branch name for feature or bugfix branches.",
     "version": "1.2",
-    "author": "P-C",
+    "author": "Vitec Capitex Financial Systems",
 
     "browser_action": {
         "default_popup": "src/popup.html"
