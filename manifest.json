@@ -3,7 +3,7 @@
 
     "name": "Branch Namer",
     "description": "Copies selected text and converts it to a valid Git branch name for feature or bugfix branches.",
-    "version": "1.2-beta",
+    "version": "1.2",
     "author": "P-C",
 
     "browser_action": {
