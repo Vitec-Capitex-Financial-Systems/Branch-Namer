@@ -13,11 +13,11 @@ chrome.runtime.onInstalled.addListener(function() {
 
 chrome.contextMenus.onClicked.addListener(function(info, tab) {
     if (tab) {
-        var branchName = "";
+        var branchName = info.selectionText;
         if (info.menuItemId === 'copyForFeatureBranch') {
-            branchName = "feature/" + info.selectionText;
+            branchName = "feature/" + branchName;
         } else {
-            branchName = "bugfix/" + info.selectionText;
+            branchName = "bugfix/" + branchName;
         }
         copyToClipboard(branchName);
     }

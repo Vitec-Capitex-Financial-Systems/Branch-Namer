@@ -7,8 +7,7 @@
     "author": "P-C",
 
     "browser_action": {
-        "default_icon": "branchnamer-icon128.png",
-        "default_popup": "popup.html"
+        "default_popup": "src/popup.html"
     },
 
     "permissions": [
@@ -18,13 +17,13 @@
     "background": {
         "persistent": false,
         "scripts": [
-            "contextmenu.js"
+            "src/contextmenu.js"
         ]
     },
   
     "icons": {
-        "16": "branchnamer-icon16.png",
-        "64": "branchnamer-icon64.png",
-        "128": "branchnamer-icon128.png"
+        "16": "images/branchnamer-icon16.png",
+        "64": "images/branchnamer-icon48.png",
+        "128": "images/branchnamer-icon128.png"
     }
 }
