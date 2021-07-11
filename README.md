@@ -7,6 +7,7 @@ Specifically, it alters the copied string as follows:
 3. Replaces anything other than a-z and 0-9 with -.
 4. Converts repeated - to a single -.
 5. Deletes any leading and trailing -.
+6. Prefixes with feature/ or bugfix/.
 
 ## Installation
 For development, it can be installed as an extension in Chrome through _Manage extensions_, when _Developer mode_ is enabled, by using _Load unpacked_ and just selecting this source directory.
