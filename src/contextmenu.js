@@ -20,11 +20,11 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
         } else {
             branchPrefix = "bugfix/";
         }
-        convertSelectionAndCopyToClipboard(branchPrefix, branchName);
+        convertSelectedTextAndCopyToClipboard(branchPrefix, branchName);
     }
 });
   
-const convertSelectionAndCopyToClipboard = (branchPrefix, branchName) => {
+const convertSelectedTextAndCopyToClipboard = (branchPrefix, branchName) => {
     const textElement = document.createElement('textarea');
     textElement.value = branchPrefix + branchName.toLowerCase()
         .replace(/[åä]/g, 'a').replace(/[ö]/g, 'o').replace(/[^a-z0-9]/g, '-')
