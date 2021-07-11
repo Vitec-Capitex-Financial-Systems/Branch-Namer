@@ -1,6 +1,6 @@
 # Branch Namer
 Branch Namer is a simple Google Chrome extension for naming Git branches in Azure DevOps. From the Chrome context menu, it lets you copy a text, typically containing an _ID_ and a _Title_ for a PBI or Bug in Azure DevOps, and converts it into a suitable Git branch name which can be pasted into the Azure DevOps _Name_ field for a new branch.
-![Azure DevOps with Branch Namer Chrome extension](images/AzureDevOps.png)
+![Azure DevOps with Branch Namer Chrome extension](images/azure_devops_example.png)
 Specifically, it alters the copied string as follows:
 1. Converts all characters to lower case.
 2. Converts Swedish characters å, ä, ö to a, a, o.

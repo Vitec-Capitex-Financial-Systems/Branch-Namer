@@ -13,17 +13,17 @@
     "permissions": [
         "contextMenus"
     ],
-  
+
     "background": {
         "persistent": false,
         "scripts": [
-            "src/contextmenu.js"
+            "src/context_menu.js"
         ]
     },
-  
+
     "icons": {
-        "16": "images/branchnamer-icon16.png",
-        "48": "images/branchnamer-icon48.png",
-        "128": "images/branchnamer-icon128.png"
+        "16": "images/branch_namer_icon-16.png",
+        "48": "images/branch_namer_icon-48.png",
+        "128": "images/branch_namer_icon-128.png"
     }
 }
