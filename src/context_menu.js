@@ -12,19 +12,19 @@ chrome.runtime.onInstalled.addListener(function() {
 });
 
 chrome.contextMenus.onClicked.addListener(function(info) {
-    var branchPrefix = '';
+    var branchType = '';
     var branchName = info.selectionText;
     if (info.menuItemId === 'copyForFeatureBranch') {
-        branchPrefix = "feature/";
+        branchType = "feature/";
     } else {
-        branchPrefix = "bugfix/";
+        branchType = "bugfix/";
     }
-    formatSelectedTextAndCopyToClipboard(branchPrefix, branchName);
+    formatSelectedTextAndCopyToClipboard(branchType, branchName);
 });
   
-const formatSelectedTextAndCopyToClipboard = (branchPrefix, branchName) => {
+const formatSelectedTextAndCopyToClipboard = (branchType, branchName) => {
     const textArea = document.createElement('TEXTAREA');
-    textArea.value = branchPrefix + branchName.toLowerCase()
+    textArea.value = branchType + branchName.toLowerCase()
         .replace(/[åä]/g, 'a').replace(/[ö]/g, 'o').replace(/[^a-z0-9]/g, '-')
         .replace(/\-+/g, '-').replace(/^\-|\-$/g, '');
     textArea.setAttribute('readonly', '');
