@@ -11,29 +11,25 @@ chrome.runtime.onInstalled.addListener(function() {
     });
 });
 
-chrome.contextMenus.onClicked.addListener(function(info, tab) {
-    if (tab) {
-        var branchPrefix = '';
-        var branchName = info.selectionText;
-        if (info.menuItemId === 'copyForFeatureBranch') {
-            branchPrefix = "feature/";
-        } else {
-            branchPrefix = "bugfix/";
-        }
-        convertSelectedTextAndCopyToClipboard(branchPrefix, branchName);
+chrome.contextMenus.onClicked.addListener(function(info) {
+    var branchPrefix = '';
+    var branchName = info.selectionText;
+    if (info.menuItemId === 'copyForFeatureBranch') {
+        branchPrefix = "feature/";
+    } else {
+        branchPrefix = "bugfix/";
     }
+    formatSelectedTextAndCopyToClipboard(branchPrefix, branchName);
 });
   
-const convertSelectedTextAndCopyToClipboard = (branchPrefix, branchName) => {
-    const textElement = document.createElement('textarea');
-    textElement.value = branchPrefix + branchName.toLowerCase()
+const formatSelectedTextAndCopyToClipboard = (branchPrefix, branchName) => {
+    const textArea = document.createElement('TEXTAREA');
+    textArea.value = branchPrefix + branchName.toLowerCase()
         .replace(/[åä]/g, 'a').replace(/[ö]/g, 'o').replace(/[^a-z0-9]/g, '-')
         .replace(/\-+/g, '-').replace(/^\-|\-$/g, '');
-    textElement.setAttribute('readonly', '');
-    textElement.style.position = 'absolute';
-    textElement.style.left = '-9999px';
-    document.body.appendChild(textElement);
-    textElement.select();
+    textArea.setAttribute('readonly', '');
+    document.body.appendChild(textArea);
+    textArea.select();
     document.execCommand('copy');
-    document.body.removeChild(textElement);
+    document.body.removeChild(textArea);
 };
