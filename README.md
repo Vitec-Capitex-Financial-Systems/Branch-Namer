@@ -11,7 +11,7 @@ Specifically, it formats the copied string as follows:
 
 ## Installation
 For development, it can be installed as an extension in Chrome through _Manage extensions_, when _Developer mode_ is enabled, by using _Load unpacked_ and just selecting this source directory.
-For normal use, it is better to download and install the latest released version directly from the Chrome Web Store where it should be available soon.
+For normal use, it is better to download and install the latest released version directly from the Chrome Web Store.
 
 ## Usage
 When the extension is installed and activated in Chrome, simply select a text, typically the _ID_ and _Title_ for your PBI or Bug in Azure DevOps when creating a new Git branch, and right click to open the context menu with _Branch Namer_ where _Copy for feature branch_ and _Copy for bugfix branch_ are available. The copied and formatted text can be pasted into the Azure DevOps _Name_ field when creating a new branch.
