@@ -16,6 +16,9 @@ For normal use, it is better to download and install the latest released version
 ## Usage
 When the extension is installed and activated in Chrome, simply select a text, typically the _ID_ and _Title_ for your PBI or Bug in Azure DevOps when creating a new Git branch, and right click to open the context menu with _Branch Namer_ where _Copy for feature branch_ and _Copy for bugfix branch_ are available. The copied and formatted text can be pasted into the Azure DevOps _Name_ field when creating a new branch.
 
+## Compatibility
+This Google Chrome plugin currently works fine for Microsoft Edge but not for Mozilla Firefox where it can be installed but won't copy any text to the clipboard.
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
